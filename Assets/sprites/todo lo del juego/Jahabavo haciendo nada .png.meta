@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: b2a64942be393954581b82bcb213c436
+guid: 976525d42a6041e4c9e234c86e19fe0a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1084053823090664462
-    second: Noc que hice _0
+      213: -7431643661451674967
+    second: Jahabavo haciendo nada _0
   - first:
-      213: 1584892154308234217
-    second: Noc que hice _1
+      213: -4773875950530510057
+    second: Jahabavo haciendo nada _1
   - first:
-      213: 1548336469415143107
-    second: Noc que hice _2
+      213: 4424310775802497588
+    second: Jahabavo haciendo nada _2
   - first:
-      213: -8765013071262533524
-    second: Noc que hice _3
+      213: -8070440667238138552
+    second: Jahabavo haciendo nada _3
   - first:
-      213: 2110068226153347034
-    second: Noc que hice _4
+      213: 428940124625227817
+    second: Jahabavo haciendo nada _4
   - first:
-      213: 915080494072383242
-    second: Noc que hice _5
+      213: 8459627374154451707
+    second: Jahabavo haciendo nada _5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Noc que hice _0
+      name: Jahabavo haciendo nada _0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fbd64d9acaa4f0f0800000000000000
-      internalID: -1084053823090664462
+      spriteID: 9aab3e5e67f7dd890800000000000000
+      internalID: -7431643661451674967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Noc que hice _1
+      name: Jahabavo haciendo nada _1
       rect:
         serializedVersion: 2
         x: 40
@@ -140,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eb88d8640baef510800000000000000
-      internalID: 1584892154308234217
+      spriteID: 71349d6bd19cfbdb0800000000000000
+      internalID: -4773875950530510057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Noc que hice _2
+      name: Jahabavo haciendo nada _2
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c6a544c0dbcc7510800000000000000
-      internalID: 1548336469415143107
+      spriteID: 43a04a7a53f466d30800000000000000
+      internalID: 4424310775802497588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Noc que hice _3
+      name: Jahabavo haciendo nada _3
       rect:
         serializedVersion: 2
         x: 40
@@ -182,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c68bdbbfc0b6c5680800000000000000
-      internalID: -8765013071262533524
+      spriteID: 84d7760e8f8000090800000000000000
+      internalID: -8070440667238138552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Noc que hice _4
+      name: Jahabavo haciendo nada _4
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad775bf3fd7784d10800000000000000
-      internalID: 2110068226153347034
+      spriteID: 920d23e45c6e3f500800000000000000
+      internalID: 428940124625227817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Noc que hice _5
+      name: Jahabavo haciendo nada _5
       rect:
         serializedVersion: 2
         x: 40
@@ -224,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a07c21e6cd403bc00800000000000000
-      internalID: 915080494072383242
+      spriteID: bfa85a89642a66570800000000000000
+      internalID: 8459627374154451707
       vertices: []
       indices: 
       edges: []
