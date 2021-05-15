@@ -13,14 +13,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - StompBox
+  - Bullets
+  - Enemy
+  - NoCollideStompBox
+  - SpawningZone
+  - HoldingHazzard
   - 
   - 
   - 
