@@ -8,12 +8,20 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public Vector2 input;
+    int direction = 1;
 
     //
     public Transform groundCheckPoint;
     public float radius;
     public LayerMask whatlsGround;
     private bool isGrounded = false;
+
+    void FlipSprite()
+    {
+        //By rotations
+        transform.eulerAngles = new Vector3(0, direction == 1 ? 0 : 180, 0);
+    }
+
 
     void groundCheck()
     {
@@ -37,6 +45,22 @@ public class PlayerController : MonoBehaviour
     {
         //Moverse
         input = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _rigidbody.velocity.y);
+        //Derecha 
+        if (input.x > 0) {
+            direction = 1;
+
+
+        }
+        else if (input.x < 0)
+        {
+            direction = 1;
+        }
+        FlipSprite();
+
+
+
+
+
         _rigidbody.velocity = input;
 
         groundCheck();
