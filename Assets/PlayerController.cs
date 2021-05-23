@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (input.x < 0)
         {
-            direction = 1;
+            direction = -1;
         }
         FlipSprite();
 

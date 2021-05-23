@@ -7,7 +7,18 @@ public class Movimiento : MonoBehaviour
     public float moveSpeed;
     private Rigidbody2D _rigibody;
     public int direction = 0;
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("Colisionando");
+            direction *= -1;
+            FlipSprite();
+        }
+    }
+
+
 
 
     void Start()
