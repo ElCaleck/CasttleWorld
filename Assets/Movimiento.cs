@@ -16,6 +16,13 @@ public class Movimiento : MonoBehaviour
             direction *= -1;
             FlipSprite();
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerController>().ResetPlayerPosition();
+        }
+
+
     }
 
 

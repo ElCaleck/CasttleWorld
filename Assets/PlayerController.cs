@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatlsGround;
     private bool isGrounded = false;
 
+    //
+    private Vector3 resetPos;
+
+
     void FlipSprite()
     {
         //By rotations
@@ -39,7 +43,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        resetPos = transform.position;
     }
+     
 
     void Update()
     {
@@ -68,9 +74,11 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        
 
+    }
 
-        
+    public void ResetPlayerPosition()
+    {
+        transform.position = resetPos;
     }
 }
