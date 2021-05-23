@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     //
     private Vector3 resetPos;
-
+    bool canDoubleJump = true;
 
     void FlipSprite()
     {
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void groundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, radius, whatlsGround);
+        if (isGrounded) { canDoubleJump = true; }
     }
 
     void Jump()
@@ -37,6 +38,9 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
+        }
+        else if (canDoubleJump){ _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
+            canDoubleJump = false;
         }
     }
 
