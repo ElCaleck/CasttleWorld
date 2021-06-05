@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
     //
     private Vector3 resetPos;
     bool canDoubleJump = true;
+    public PlayerHealth _PlayerHealth;
+
+    //shoting
+
+    public GameObject bullet; // Aqui se añade el prefab que se clona al disparar 
+    public Transform shootPos;
 
     void FlipSprite()
     {
@@ -39,15 +45,27 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
         }
-        else if (canDoubleJump){ _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
+        else if (canDoubleJump) { _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
             canDoubleJump = false;
         }
     }
+
+    void ShootBullet()
+    {
+        Instantiate(bullet, shootPos.position, Quaternion.identity);
+    }
+    
+    
+
+
+
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         resetPos = transform.position;
+
+        _PlayerHealth = GetComponent<PlayerHealth>();
     }
      
 
@@ -79,6 +97,10 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
+        if(Input.GetButton("Firel" ))
+        {
+            ShootBullet();
+        }
     }
 
     public void ResetPlayerPosition()
