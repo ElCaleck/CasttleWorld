@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bullet; // Aqui se añade el prefab que se clona al disparar 
     public Transform shootPos;
+    float timer = 0;
+    public float maxTimeBetweenBullets;
+    bool canShoot = true;
+
 
     void FlipSprite()
     {
@@ -52,7 +56,10 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
-        Instantiate(bullet, shootPos.position, Quaternion.identity);
+      GameObject tempBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        tempBullet.GetComponent<Bullet>().Shoot(direction);
+
+        canShoot = false;
     }
     
     
@@ -66,6 +73,11 @@ public class PlayerController : MonoBehaviour
         resetPos = transform.position;
 
         _PlayerHealth = GetComponent<PlayerHealth>();
+
+        direction = 1;
+
+        timer = maxTimeBetweenBullets;
+
     }
      
 
@@ -97,14 +109,39 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetButton("Firel" ))
+       
+
+        if (canShoot)
         {
-            ShootBullet();
+            if (Input.GetButton("Fire1"))
+            {
+                ShootBullet();
+            }
         }
+
+        ShootTimer();
     }
 
     public void ResetPlayerPosition()
     {
         transform.position = resetPos;
+    }
+
+    void ShootTimer()
+    {
+        //Si no puedo disparar
+        if (!canShoot)
+        {
+
+            //Entonces corre un cooldown
+            timer -= Time.deltaTime;
+
+            //Cuando el cooldown termine, entonces puedo volver a disparar
+            if (timer <= 0)
+            {
+                timer = maxTimeBetweenBullets;
+                canShoot = true;
+            }
+        }
     }
 }
