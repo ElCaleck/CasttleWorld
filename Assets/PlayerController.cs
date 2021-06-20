@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     public float maxTimeBetweenBullets;
     bool canShoot = true;
 
+    // 
+    BulletManager BulletManager;
+
 
     void FlipSprite()
     {
@@ -60,6 +63,8 @@ public class PlayerController : MonoBehaviour
         tempBullet.GetComponent<Bullet>().Shoot(direction);
 
         canShoot = false;
+
+        BulletManager.ShootBullet();
     }
     
     
@@ -77,6 +82,9 @@ public class PlayerController : MonoBehaviour
         direction = 1;
 
         timer = maxTimeBetweenBullets;
+
+        BulletManager = GetComponent<BulletManager>();
+        BulletManager.Init();
 
     }
      
@@ -115,6 +123,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
+                if(BulletManager.CanShoot())
                 ShootBullet();
             }
         }

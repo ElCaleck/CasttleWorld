@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2357585348139503451}
   - component: {fileID: -3797241496022754478}
   - component: {fileID: 6103635593948950112}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arrow_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.003902888, y: -0.044693783}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5216e1513760d545af74a43e9fed7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspeed: 7
+  bulletspeed: 9
 --- !u!95 &6103635593948950112
 Animator:
   serializedVersion: 3
