@@ -129,8 +129,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07738476, y: 0.013116002}
-  m_Size: {x: 0.58290905, y: 0.58290905}
+  m_Offset: {x: 0.073178105, y: 0.034391284}
+  m_Size: {x: 0.5632704, y: 0.5632704}
   m_Direction: 0
 --- !u!50 &4181214566694909245
 Rigidbody2D:
@@ -168,4 +168,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4095450268307130906, guid: ff8e1145306bcc24c8ecf93ce5fee106,
     type: 3}
   shootPos: {fileID: 4181214566105625044}
-  maxTime: 5
+  maxTime: 0.8
+  direction: -1

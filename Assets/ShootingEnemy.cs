@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ShootingEnemy : MonoBehaviour
 {
-    int direction;
+
 
     public GameObject bulletPrefab;
     public Transform shootPos;
     float timer;
     public float maxTime;
     bool canShoot;
-
+    public int direction;
+    
     void Start()
     {
         timer = maxTime;
         canShoot = true;
-        direction = -1;
     }
 
     void Update()
