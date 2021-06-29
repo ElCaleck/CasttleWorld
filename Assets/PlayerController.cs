@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     // 
     BulletManager BulletManager;
-
+    DeathCounter deathCounter;
 
     void FlipSprite()
     {
@@ -86,6 +86,9 @@ public class PlayerController : MonoBehaviour
         BulletManager = GetComponent<BulletManager>();
         BulletManager.Init();
 
+        deathCounter = GetComponent<DeathCounter>();
+        deathCounter.Init();
+
     }
      
 
@@ -134,6 +137,7 @@ public class PlayerController : MonoBehaviour
     public void ResetPlayerPosition()
     {
         transform.position = resetPos;
+        deathCounter.DyingAndCounting();
     }
 
     void ShootTimer()
