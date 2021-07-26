@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     // 
     BulletManager BulletManager;
     DeathCounter deathCounter;
+    public Animator animator;
 
     void FlipSprite()
     {
@@ -42,6 +43,11 @@ public class PlayerController : MonoBehaviour
 
     void groundCheck()
     {
+        if (isGrounded)
+        {
+
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, radius, whatlsGround);
         if (isGrounded) { canDoubleJump = true; }
     }
@@ -50,16 +56,24 @@ public class PlayerController : MonoBehaviour
     {
         if (isGrounded)
         {
+            SoundController._instance.PlayJump(); 
+
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
         }
-        else if (canDoubleJump) { _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
+        else if (canDoubleJump) 
+        {
+            SoundController._instance.PlayJump();
+
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
             canDoubleJump = false;
         }
     }
 
     void ShootBullet()
     {
-      GameObject tempBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        SoundController._instance.PlayShoot();
+
+        GameObject tempBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
         tempBullet.GetComponent<Bullet>().Shoot(direction);
 
         canShoot = false;
@@ -136,6 +150,8 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
+        SoundController._instance.PlayDeath();
+
         transform.position = resetPos;
         deathCounter.DyingAndCounting();
     }

@@ -20,7 +20,7 @@ public class DeathCounter : MonoBehaviour
 
     void RenderDeath()
     {
-        deathCounterText.text = "AquiPuedesPonerUnMensajeSiQuieres" + deathCounter;
+        deathCounterText.text = "" + deathCounter;
     }
 
 }
