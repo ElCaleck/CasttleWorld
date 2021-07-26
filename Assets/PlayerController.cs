@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 input;
     int direction = 1;
 
+    //Animation
+
+    public Animator animator;
+
     //
     public Transform groundCheckPoint;
     public float radius;
@@ -32,8 +36,7 @@ public class PlayerController : MonoBehaviour
     // 
     BulletManager BulletManager;
     DeathCounter deathCounter;
-    public Animator animator;
-
+    
     void FlipSprite()
     {
         //By rotations
@@ -45,11 +48,15 @@ public class PlayerController : MonoBehaviour
     {
         if (isGrounded)
         {
-
+              canDoubleJump = true;
+              animator.SetBool("isGrounded", true);
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, radius, whatlsGround);
         if (isGrounded) { canDoubleJump = true; }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, radius, whatlsGround); 
+        
     }
 
     void Jump()
@@ -102,6 +109,8 @@ public class PlayerController : MonoBehaviour
 
         deathCounter = GetComponent<DeathCounter>();
         deathCounter.Init();
+
+        animator = GetComponent<Animator>();
 
     }
      
