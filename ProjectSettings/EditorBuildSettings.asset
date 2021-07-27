@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Pantalla de Inicio.unity
+    path: Assets/Scenes/Pantalla De Inicio.unity
     guid: 31fa28f292063d947933437193c215a8
   - enabled: 1
-    path: Assets/Scenes/Mundos.unity
+    path: Assets/Scenes/Selectores/SelectorMundos.unity
     guid: 7a546e8fe585a2945a9fad496abc860b
   - enabled: 1
-    path: Assets/Scenes/Selector de niveles.unity
+    path: Assets/Scenes/Selectores/SelectorNiveles.unity
     guid: 94897f9fbd1999a4f978cd77ac25d15b
   - enabled: 1
     path: Assets/Scenes/SampleScene 1.unity
     guid: b818b87e5fbb27a4a856e253dea05d06
   - enabled: 1
-    path: Assets/Scenes/SampleSceme 2.unity
+    path: Assets/Scenes/Niveles/Nivel 2.unity
     guid: f497db7fc80ab254787e58c73ea0b1e8
   - enabled: 0
     path: 
